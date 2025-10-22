@@ -10,8 +10,6 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY ai_model/stt_ru_conformer_ctc_large.nemo /app/ai_model/stt_ru_conformer_ctc_large.nemo || true
-
 COPY . .
 
 EXPOSE 8003
